@@ -25,6 +25,15 @@ Logging Service
 
 Logging service is a thread that runs parallel with the image effect thread. This thread creates a log for each effect and stores it. This is done using the functions add logs, get all logs, get logs by effect, clear all logs, and get logs between timestamps.
 
+Prerequisites
+
+	Ensure that you have Java(jdk), and g++ set up in your computer.
+ 	Install Visual Studio Code on your computer using the link below:
+  		https://code.visualstudio.com/Download			(You can use Visual Studio Code for compiling C++ code)
+     	Installing an IDE for java, such as IntelliJ IDEA is recommended to run Java code
+      		https://www.jetbrains.com/idea/download/?section=mac
+
+
 Run-tutorial:
 
 	First, modify the makefile according to your OS(also modify your Java version in the makefile). 
@@ -35,7 +44,10 @@ Run-tutorial:
      	Now, run the "npm start" command in the ImageEffectFrontend directory. 
       	This will create a link which can be opened. 
        	If you face "Server took too long to respond", try disabling your firewall or antivirus. 
-	Now, go to ImageEffectBackend/src/main/java and run the ImageEffectApplication.java file after setting the Libraries directory as the 'sources' root. (This will enable all the effects and the logging service)
+	Now, go to ImageEffectBackend/src/main/java:
+ 			Mark the Libraries directory as 'sources' root.
+ 			Run ImageEffectApplication.java 
+ 		(This will enable all the effects and the logging service)
  	You can now paste the link generated in the browser to use the application
 
   
@@ -44,7 +56,7 @@ We've attached a few Test images in /TestImages which you can play around with
 
 General Project Design:
 
-	Effects in Java are divided into 3 broad categories(as of now):
+Effects in Java are divided into 3 broad categories(as of now):
 
 				NoParameterEffects-
 									Sepia
@@ -63,12 +75,12 @@ General Project Design:
 									Hue Saturation
 									Flip
 
-	We have made 3 abstract classes corresponding to each classification and 11 concrete classes, each inheriting their respective classification's abstract class
-	Similarly to handle various Exceptions(some have been handled now, others might need handling later), we've made 3 broad classifications:
+We have made 3 abstract classes corresponding to each classification and 11 concrete classes, each inheriting their respective classification's abstract class
+Similarly to handle various Exceptions(some have been handled now, others might need handling later), we've made 3 broad classifications:
 
 				NoParameterException
 				SingleParameterException
 				DoubleParameterException
 	
-	There are 11 concrete EffectExceptions which inherit their respective classification's class
-	Other than these exceptions, there is the IllegalParameterException which handles unnecessary/junk parameter values.
+There are 11 concrete EffectExceptions which inherit their respective classification's class
+Other than these exceptions, there is the IllegalParameterException which handles unnecessary/junk parameter values.
