@@ -54,7 +54,6 @@ General Project Design:
 									Flip
 
 	We have made 3 abstract classes corresponding to each classification and 11 concrete classes, each inheriting their respective classification's abstract class
-
 	Similarly to handle various Exceptions(some have been handled now, others might need handling later), we've made 3 broad classifications:
 
 				NoParameterException
@@ -62,5 +61,4 @@ General Project Design:
 				DoubleParameterException
 	
 	There are 11 concrete EffectExceptions which inherit their respective classification's class
-
 	Other than these exceptions, there is the IllegalParameterException which handles unnecessary/junk parameter values.
