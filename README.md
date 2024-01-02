@@ -29,7 +29,8 @@ Prerequisites
 
 	Ensure that you have Java(jdk), and g++ set up in your computer.
  	Install Visual Studio Code on your computer using the link below:
-  		https://code.visualstudio.com/Download			(You can use Visual Studio Code for compiling C++ code)
+  		https://code.visualstudio.com/Download			
+    		(You can use Visual Studio Code for compiling C++ code)
      	Installing an IDE for java, such as IntelliJ IDEA is recommended to run Java code
       		https://www.jetbrains.com/idea/download/?section=mac
 
