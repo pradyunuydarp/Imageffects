@@ -1,5 +1,5 @@
 
-					👾**Imageffects**👾
+						👾**Imageffects**👾
 
 Imageffects is a software that applies various image effects to an input image. It takes an image input of the format jpeg or png and returns the output processed image with the applied effect and the option to download the processed image. The effects that can be applied are:
 
