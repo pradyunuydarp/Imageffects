@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+      <!-- Left Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="upload-section">
+          <h2>Source Image</h2>
+          <img *ngIf="selectedFile" [src]="selectedImageUrl" alt="Source Image" class="img-fluid">
+          <div *ngIf="!selectedFile" class="placeholder" style="cursor: default;"></div>
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" class="btn btn-primary mt-3">
+        </div>
+      </div>
+  
+      <!-- Center Section (2 columns) -->
+      <div class="col-md-2">
+        <div class="apply-button text-center mt-4">
+          <button (click)="applyEffect()" class="btn btn-primary mt-3">Apply</button>
+        </div>
+      </div>
+  
+      <!-- Right Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="result-section">
+          <h2>Dominant Colour</h2>
+          <img *ngIf="resultImageUrl" [src]="resultImageUrl" alt="Result Image" class="img-fluid">
+          <div *ngIf="!resultImageUrl" class="placeholder" style="cursor: default;"></div>
+  
+          <!-- Download Button -->
+          <div class="btn btn-primary" *ngIf="resultImageUrl" (click)="downloadResultImage()" class="btn btn-success container-fluid mt-3">
+            Download Result
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

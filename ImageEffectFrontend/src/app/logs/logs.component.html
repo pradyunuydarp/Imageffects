@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 mb-3">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="effectNameFilter"
+          placeholder="Filter by Effect Name"
+        />
+      </div>
+    </div>
+    <div class="class col-md-2 mb-3">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary col-12" type="button" (click)="filterLogsByEffect()">
+          Filter
+        </button>
+      </div>
+    </div>
+    <div class="class col-md-2 mb-3">
+      <div class="input-group-append">
+        <button class="btn btn-danger col-12" type="button" (click)="clearLogs()">
+          Clear Logs
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <label for="startTime">Start Time:</label>
+      <input type="datetime-local" class="form-control" [(ngModel)]="startTime" id="startTime">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="endTime">End Time:</label>
+      <input type="datetime-local" class="form-control" [(ngModel)]="endTime" id="endTime">
+    </div>
+    <div class="col-md-4 mb-3 mt-auto">
+      <div class="btn btn-primary col-12" type="button" (click)="loadLogsBetweenTimestamps()">Load Between Timestamps</div>
+    </div>
+  </div>
+
+  <table class="table mt-4">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Timestamp</th>
+        <th scope="col">Filename</th>
+        <th scope="col">Effect Name</th>
+        <th scope="col">Option Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs">
+        <td>{{ log.timestamp | date:'medium' }}</td>
+        <td>{{ log.filename }}</td>
+        <td>{{ log.effectName }}</td>
+        <td>{{ log.optionValues }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

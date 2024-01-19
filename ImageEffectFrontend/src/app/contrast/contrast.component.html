@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <!-- Left Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="upload-section">
+          <h2>Source Image</h2>
+          <img *ngIf="selectedFile" [src]="selectedImageUrl" alt="Source Image" class="img-fluid">
+          <div *ngIf="!selectedFile" class="placeholder" style="cursor: default;"></div>
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" class="btn btn-primary mt-3">
+        </div>
+      </div>
+  
+      <!-- Center Section (2 columns) -->
+      <div class="col-md-2">
+        <div class="slider-section text-center mt-4">
+          <h5>Contrast Slider</h5>
+          <input type="range" min="0" max="200" [(ngModel)]="contrastAmount" class="form-control">
+          <button (click)="applyContrastEffect()" class="btn btn-primary mt-3">Apply</button>
+        </div>
+      </div>
+  
+      <!-- Right Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="result-section">
+          <h2>Result Image</h2>
+          <img *ngIf="resultImageUrl" [src]="resultImageUrl" alt="Result Image" class="img-fluid">
+          <div *ngIf="!resultImageUrl" class="placeholder" style="cursor: default;"></div>
+  
+          <!-- Download Button -->
+          <div class="btn btn-primary" *ngIf="resultImageUrl" (click)="downloadResultImage()" class="btn btn-success container-fluid mt-3">
+            Download Result
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+.rotation-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-toggle {
+    width: 60px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #576877;
+    border-color: #2e3943;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    &:hover {
+      background-color: #6c7d93;
+    }
+  
+    &.active {
+      background-color: #3b4a57;
+      border-color: #1d262f;
+      box-shadow: none;
+    }
+  }
+  

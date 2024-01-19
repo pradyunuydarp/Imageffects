@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+      <!-- Left Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="upload-section">
+          <h2>Source Image</h2>
+          <img *ngIf="selectedFile" [src]="selectedImageUrl" alt="Source Image" class="img-fluid">
+          <div *ngIf="!selectedFile" class="placeholder" style="cursor: default;"></div>
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" class="btn btn-primary mt-3">
+        </div>
+      </div>
+  
+      <!-- Center Section (2 columns) -->
+      <div class="col-md-2">
+        <div class="rotation-buttons text-center mt-4">
+          <h5>Rotation Options</h5>
+          <div class="container">
+            <div class="row">
+                <button [class.active]="rotationLevel === 90" (click)="rotateClockwise(90)" class="btn btn-toggle col-md-6">90°</button>
+                <button [class.active]="rotationLevel === 180" (click)="rotateClockwise(180)" class="btn btn-toggle col-md-6">180°</button>
+            </div>
+            <div class="row">
+                <button [class.active]="rotationLevel === 270" (click)="rotateClockwise(270)" class="btn btn-toggle col-md-6">270°</button>
+                <button [class.active]="rotationLevel === 0" (click)="rotateClockwise(0)" class="btn btn-toggle col-md-6">0°</button>
+            </div>
+          </div>
+          <button (click)="applyRotationEffect()" class="btn btn-primary mt-3">Apply</button>
+        </div>
+      </div>
+  
+      <!-- Right Section (5 columns) -->
+      <div class="col-md-5">
+        <div class="result-section">
+          <h2>Result Image</h2>
+          <img *ngIf="resultImageUrl" [src]="resultImageUrl" alt="Result Image" class="img-fluid">
+          <div *ngIf="!resultImageUrl" class="placeholder" style="cursor: default;"></div>
+  
+          <!-- Download Button -->
+          <div class="btn btn-primary" *ngIf="resultImageUrl" (click)="downloadResultImage()" class="btn btn-success container-fluid mt-3">
+            Download Result
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
