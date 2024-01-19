@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@angular/cli": "^14.2.10"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.6"
+  }
+}
