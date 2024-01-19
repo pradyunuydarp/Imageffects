@@ -87,5 +87,5 @@ Similarly to handle various Exceptions(some have been handled now, others might 
 				SingleParameterException
 				DoubleParameterException
 	
-There are 11 concrete EffectExceptions which inherit their respective classification's class
-Other than these exceptions, there is the IllegalParameterException which handles unnecessary/junk parameter values.
+There are 11 concrete EffectExceptions that inherit their respective classification's class.
+Other than these exceptions, the IllegalParameterException handles unnecessary/junk parameter values.
