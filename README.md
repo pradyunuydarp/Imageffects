@@ -89,3 +89,11 @@ Similarly to handle various Exceptions(some have been handled now, others might 
 	
 There are 11 concrete EffectExceptions that inherit their respective classification's class.
 Other than these exceptions, the IllegalParameterException handles unnecessary/junk parameter values.
+
+## Contributors
+- Pradyun Devarakonda
+- Tahir Mohammed Khadarabad
+- Tadikonda Venkata Sai Chaitanya
+- Tarun Kondapalli Srivatsa
+- Lohitaksh Maruvada
+- Aryan Nukala
